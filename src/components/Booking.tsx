@@ -1,7 +1,9 @@
+import { forwardRef } from "react"
+interface ContactSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-const Booking = () => {
+const Booking = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
   return (
-    <div className=" h-screen bg-aboutbg flex items-center relative">
+    <div ref={ref} className=" h-screen bg-aboutbg flex items-center">
        <div className="w-[85%] mx-auto flex items-center justify-between">
        <div className="flex flex-col gap-4 w-[45%]">
             <h2 className=" text-lg uppercase font-semibold text-orange-700">Brunch</h2>
@@ -13,12 +15,12 @@ const Booking = () => {
             </div>
         </div>
         <div className="flex gap-8">
-            <img className="h-[340px] w-[280px] absolute top-[40%] right-[30%] object-cover rounded-lg" src="https://cdn.prod.website-files.com/666c5fcac400739f045a12cb/667431c0577927841a912765_cinnamon-buns-p-500.webp" alt="" />
-            <img className="h-[340px] w-[280px] absolute top-[20%] right-[5%]  object-cover rounded-lg" src="https://cdn.prod.website-files.com/666c5fcac400739f045a12cb/667431c04d29a8eb2ac82693_breaking-poach-egg-p-500.webp" alt="" />
+            <img className="h-[340px] w-[280px]  object-cover rounded-lg" src="https://cdn.prod.website-files.com/666c5fcac400739f045a12cb/667431c04d29a8eb2ac82693_breaking-poach-egg-p-500.webp" alt="" />
+            <img className="h-[340px] w-[280px] object-cover rounded-lg" src="https://cdn.prod.website-files.com/666c5fcac400739f045a12cb/667431c0577927841a912765_cinnamon-buns-p-500.webp" alt="" />
         </div>
        </div>
     </div>
   )
-}
+})
 
 export default Booking

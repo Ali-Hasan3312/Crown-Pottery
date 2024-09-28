@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import heroImage from "../assets/images/heroImage.jpg";
-
-const HeroSection = () => {
+interface ContactSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
+const HeroSection = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
   return (
-    <div className="relative w-[90%] mx-auto mt-8 rounded-xl h-screen bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
+    <div ref={ref} className="relative w-[90%] mx-auto mt-8 rounded-xl h-screen bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
       {/* Overlay */}
       <div className="absolute inset-0 rounded-xl bg-black/50"></div>
       
@@ -17,6 +18,6 @@ const HeroSection = () => {
       </div>
     </div>
   );
-}
+})
 
 export default HeroSection;

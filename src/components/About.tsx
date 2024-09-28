@@ -1,7 +1,10 @@
+import { forwardRef } from "react"
 import aboutImage from "../assets/images/AboutImage.webp"
-const About = () => {
+interface ContactSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+const About = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
   return (
-    <div className=" w-full h-screen bg-aboutbg mt-16 flex items-center">
+    <div ref={ref} className=" w-full h-screen bg-aboutbg mt-16 flex items-center">
      <div className="flex items-center gap-8 w-[85%] mx-auto">
      <div className="flex gap-6 flex-col">
         <h2 className=" text-lg uppercase font-semibold text-orange-700">About Us</h2>
@@ -13,6 +16,6 @@ const About = () => {
      </div>
     </div>
   )
-}
+})
 
 export default About
