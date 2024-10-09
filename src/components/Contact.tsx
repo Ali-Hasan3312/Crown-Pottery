@@ -10,11 +10,11 @@ const Contact =  forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
  
         <div ref={ref} className=" py-12 bg-aboutbg">
         <h1 className=" text-2xl uppercase font-semibold text-center pb-4 tracking-wider text-black">Get In Touch</h1>
-        <div className=" h-[600px] grid grid-cols-[70%_30%] w-[80%] mx-auto shadow-lg mt-4">
-        <div className=" bg-white">
+        <div className=" h-[600px] grid grid-cols-1 md:grid-cols-[70%_30%] w-[80%] mx-auto shadow-lg mt-4">
+        <div className=" bg-white max-sm:pb-4">
             <div className=" w-[80%] mx-auto mt-8">
             <h1 className=" text-lg font-medium">Send Us A Message</h1>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="h-[100px] w-[280px] mt-4">
                     <label className=" text-gray-400">Name *</label>
                     <input type="text" className=" h-[30px] w-full border-b-[1px] outline-none focus:border-black mt-2 placeholder:text-gray-600" placeholder="Your name" />
@@ -34,11 +34,11 @@ const Contact =  forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
                     <label className=" text-gray-400">Message *</label>
                     <input type="text" className=" h-[30px] w-full border-b-[1px] outline-none focus:border-black mt-6 placeholder:text-gray-600" placeholder="Write your message" />
                 </div>
-                <button className=" h-12 w-44 mt-4 hover:opacity-70 transition-all duration-300 text-white bg-blue-900 ">Send Message</button>
+                <button className=" h-12 w-44 mt-4 hover:opacity-70 transition-all duration-300 text-white bg-red-700 ">Send Message</button>
             </div>
         </div>
-        <div className=" bg-blue-900">
-            <div className=" w-[80%] mx-auto text-gray-400 flex flex-col gap-4 mt-8">
+        <div className=" bg-red-700 max-sm:pb-6">
+            <div className=" w-[80%] mx-auto text-white flex flex-col gap-4 mt-8">
             <h1 className=" text-xl text-white">Contact Information</h1>
             <p>We will be happy to help with any questions you might have about the Crown Pottery!</p>
             <div className="flex items-start gap-4 mt-8">
@@ -56,7 +56,7 @@ const Contact =  forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
             </div>
         </div>
         </div>
-        
+        <div className=" max-sm:mt-[400px]"></div>
         </div>
     
     </>
