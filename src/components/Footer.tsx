@@ -3,11 +3,11 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa6";
 interface FooterProps {
-    onScrollToContact: () => void;
-    onScrollToBooking: () => void;
-    onScrollToMenus: () => void;
-    onScrollToAbout: () => void;
-    onScrollToLanding: () => void;
+    onScrollToContact?: () => void;
+    onScrollToBooking?: () => void;
+    onScrollToMenus?: () => void;
+    onScrollToAbout?: () => void;
+    onScrollToLanding?: () => void;
   }
  
 const Footer = (
@@ -26,14 +26,14 @@ const Footer = (
         <div className=" uppercase relative text-white flex items-center gap-4">
              
             <button onClick={ScrollTop} className=" absolute top-0 h-20 w-24"></button>
-            <span className="text-lg font-semibold text-nowrap tracking-widest">Crema.</span>
+            <span className="text-lg font-semibold text-nowrap tracking-widest">Crown Pottery</span>
         </div>
             <div className="text-white flex flex-col mt-2 gap-1">
-            <span>Master Park</span>
-            <span>Crown Pottery</span>
-            <span>Surrey</span>
-            <span>RH8 9NA</span>
-            <span>Tel: +(92) 3023342784</span>
+            <span>Near Bilal Gunj Market</span>
+            <span>Bazar No. 1, Madina Colony,</span>
+            <span>Sheikhupura Road</span>
+            <span>Gujranwala</span>
+            <span>Tel: +92-3034605269</span>
             <Link className=" uppercase text-lg" to={""}>View With Google Maps</Link>
         </div>
         </div>

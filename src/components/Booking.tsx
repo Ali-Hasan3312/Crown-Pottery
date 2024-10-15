@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
-import blackMug from "../assets/images/MugBlack.jpg"
-import yellowmugs from "../assets/images/yellowmugs.jpg"
+import blackMug from "../assets/images/MugBlack.jpg";
+import yellowmugs from "../assets/images/yellowmugs.jpg";
+import { Link } from "react-router-dom";
 
 interface ContactSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -9,32 +10,30 @@ const Booking = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
     <div ref={ref} className="py-12 bg-aboutbg flex items-center">
       <div className="w-[85%] mx-auto flex max-sm:flex-col max-sm:justify-normal items-center justify-between">
         <div className="flex flex-col gap-4 w-[45%] max-sm:w-[90%]">
-          <h2 className="text-lg uppercase font-semibold text-orange-700">Craftsmanship</h2>
+          <h2 className="text-lg uppercase font-semibold text-orange-700">Our Collections</h2>
           <h1 className="text-[40px] md:text-[55px] leading-[1] font-semibold">
-            Timeless Ceramics for Every Occasion
+            Handcrafted Elegance for Every Space
           </h1>
           <p>
-            At Crown Pottery, we are committed to creating beautiful, high-quality ceramics that enhance your daily life. Each piece is carefully crafted by skilled artisans to ensure both elegance and durability, making every meal a special experience.
+            Discover the art of modern pottery at Crown Pottery. Each piece in our collection is a testament to our passion for quality and design, combining functionality with beauty to elevate your home and dining experience.
           </p>
           <div className="flex items-center gap-4">
-            <button className="h-10 w-32 text-white rounded-lg bg-orange-700 hover:scale-110 transition-all duration-500 hover:opacity-70 hover:text-black">
-              Shop Now
-            </button>
-            <button className="h-10 w-32 text-black border border-black rounded-lg bg-inherit hover:scale-110 transition-all duration-500 hover:opacity-70 hover:text-black">
+           
+            <Link to={"/shop"} className="h-10 w-32 flex items-center justify-center text-black border border-black rounded-lg bg-inherit hover:scale-110 transition-all duration-500 hover:opacity-70 hover:text-black">
               View Collection
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex gap-8 max-sm:flex-col">
           <img
             className="h-[340px] md:w-[280px] max-sm:w-[80vw] max-sm:mx-auto max-sm:mt-4 object-cover rounded-lg"
             src={blackMug}
-            alt="Ceramic Mug"
+            alt="Black Ceramic Mug"
           />
           <img
             className="h-[340px] w-[280px] max-sm:w-[80vw] max-sm:mx-auto object-cover rounded-lg"
             src={yellowmugs}
-            alt="Ceramic Mugs"
+            alt="Yellow Ceramic Mugs"
           />
         </div>
       </div>

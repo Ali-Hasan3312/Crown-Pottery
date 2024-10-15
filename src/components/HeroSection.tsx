@@ -2,13 +2,14 @@ import { forwardRef } from "react";
 import Slider from "react-slick"; // Import react-slick slider
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import heroImage from "../assets/images/heroImg1.jpg";
+import heroImage from "../assets/images/drinkwares.jpg";
 import heroImage2 from "../assets/images/heroImg2.png"; // Add more images
 import heroImage3 from "../assets/images/heroImg3.jpg";
 interface ContactSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
 const HeroSection = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
   const settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -33,9 +34,9 @@ const HeroSection = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => 
               <div className="absolute inset-0 rounded-xl bg-black/50"></div>
 
               {/* Content */}
-              <div className="relative top-28 z-10 flex flex-col items-start justify-center h-full p-8 md:p-16 text-white">
-                <h1 className="text-[42px] max-sm:text-[30px] max-sm:w-[60%] font-bold leading-tight mb-4 w-[40%]">
-                  We are passionate about all things coffee
+              <div className="relative top-28 z-10 flex flex-col items-start justify-center h-full p-8 md:p-16 text-white/90">
+                <h1 className="text-[42px] max-sm:text-[30px] max-sm:w-[70%] font-bold leading-tight mb-4 w-[50%]">
+                  We are passionate about all things coffee & tea
                 </h1>
                 <p className="max-w-md text-lg md:text-xl">
   At Crown Pottery, we bring together craftsmanship and creativity to deliver the finest ceramic pieces. Our collection blends tradition with modern designs, crafted with care and attention to detail.

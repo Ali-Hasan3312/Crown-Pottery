@@ -9,16 +9,25 @@ import img6 from "../assets/images/Our Gallery/factory/img6.jpg"
 import img7 from "../assets/images/Our Gallery/factory/img7.jpg"
 import img8 from "../assets/images/Our Gallery/factory/img8.jpg"
 import img9 from "../assets/images/Our Gallery/factory/img9.jpg"
-import product1 from "../assets/images/Our Gallery/products/product1.jpg"
-import product2 from "../assets/images/Our Gallery/products/product2.jpg"
-import product3 from "../assets/images/Our Gallery/products/product3.jpg"
-import product4 from "../assets/images/Our Gallery/products/product4.jpg"
-import product5 from "../assets/images/Our Gallery/products/product5.jpg"
-import product6 from "../assets/images/Our Gallery/products/product6.jpg"
-import product7 from "../assets/images/Our Gallery/products/product7.jpg"
-import product8 from "../assets/images/Our Gallery/products/product8.jpg"
-import product9 from "../assets/images/Our Gallery/products/product9.jpg"
-import product10 from "../assets/images/Our Gallery/products/product10.jpg"
+import img10 from "../assets/images/Our Gallery/factory/img10.jpg"
+import img11 from "../assets/images/Our Gallery/factory/img11.jpg"
+import img12 from "../assets/images/Our Gallery/factory/img12.jpg"
+import product1 from "../assets/images/Products/product1.jpg"
+import product2 from "../assets/images/products/product2.jpg"
+import product3 from "../assets/images/products/product3.jpg"
+import product4 from "../assets/images/products/product4.jpg"
+import product5 from "../assets/images/products/product5.jpg"
+import product6 from "../assets/images/products/product6.jpg"
+import product7 from "../assets/images/products/product7.jpg"
+import product8 from "../assets/images/products/product8.jpg"
+import product9 from "../assets/images/products/product9.jpg"
+import product10 from "../assets/images/products/product10.jpg"
+import product11 from "../assets/images/products/product11.jpg"
+import product12 from "../assets/images/products/product12.jpg"
+import product13 from "../assets/images/products/product13.jpg"
+import product14 from "../assets/images/products/product14.jpg"
+import product15 from "../assets/images/products/product15.jpg"
+
 import GalleryProps from './GalleryProps'
 interface GalleryProps extends React.HTMLAttributes<HTMLDivElement> {}
 const Gallery = forwardRef<HTMLDivElement, GalleryProps>((props, ref) => {
@@ -55,13 +64,10 @@ const Gallery = forwardRef<HTMLDivElement, GalleryProps>((props, ref) => {
                 <Link to={"#"} className={`tracking-wide uppercase hover:text-custom-yellow hover:transition-all hover:duration-300 ${factory? "text-red-700" : "text-gray-800"}`} onClick={factoryHandler}>Factory</Link>
         </div>
        </div>
-       <div className='grid grid-cols-4 gap-3 mt-10 ml-8 max-sm:ml-0 max-sm:grid-cols-1 max-sm:px-16'>
+       <div className='grid grid-cols-4 gap-3 mt-10 w-[98%] mx-auto max-sm:ml-0 max-sm:grid-cols-1 max-sm:px-16'>
       {all && (
         <>
-          <GalleryProps image={img1} />
-          <GalleryProps image={img2} />
-          <GalleryProps image={img3} />
-          <GalleryProps image={img4} />
+          
           <GalleryProps image={product1} />
           <GalleryProps image={product2} />
           <GalleryProps image={product3} />
@@ -72,6 +78,15 @@ const Gallery = forwardRef<HTMLDivElement, GalleryProps>((props, ref) => {
           <GalleryProps image={product8} />
           <GalleryProps image={product9} />
           <GalleryProps image={product10} />
+          <GalleryProps image={product11} />
+          <GalleryProps image={product12} />
+          <GalleryProps image={product13} />
+          <GalleryProps image={product14} />
+          <GalleryProps image={product15} />
+          <GalleryProps image={img1} />
+          <GalleryProps image={img2} />
+          <GalleryProps image={img3} />
+          <GalleryProps image={img4} />
           <GalleryProps image={img5} />
           <GalleryProps image={img6} />
           <GalleryProps image={img7} />
@@ -91,6 +106,8 @@ const Gallery = forwardRef<HTMLDivElement, GalleryProps>((props, ref) => {
           <GalleryProps image={product8} />
           <GalleryProps image={product9} />
           <GalleryProps image={product10} />
+          <GalleryProps image={product11} />
+          <GalleryProps image={product12} />
 
         </>
       )}
@@ -105,6 +122,9 @@ const Gallery = forwardRef<HTMLDivElement, GalleryProps>((props, ref) => {
           <GalleryProps image={img7} />
           <GalleryProps image={img8} />
           <GalleryProps image={img9} />
+          <GalleryProps image={img10} />
+          <GalleryProps image={img11} />
+          <GalleryProps image={img12} />
           </>
       )}
     </div>
