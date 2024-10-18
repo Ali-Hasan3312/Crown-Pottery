@@ -1,6 +1,6 @@
 import mugs from "../assets/images/handcraftedmugs.jpg"
 import drinkware from "../assets/images/drinkwares.jpg"
-import plate1 from "../assets/images/plate1.jpg"
+import plate1 from "../assets/images/Products/product23.jpg"
 const InfoGrid = () => {
   return (
     <div className="grid grid-cols-3 max-sm:grid-cols-1 py-12 w-[84%] mx-auto">
@@ -31,7 +31,7 @@ const InfoGrid = () => {
           className="h-[350px] w-full rounded-lg object-cover"
           src={drinkware}
         />
-        <h1 className="text-4xl font-semibold">Customer Printing Solutions</h1>
+        <h1 className="text-4xl font-semibold">Custom Printing Solutions</h1>
         <p className="text-sm max-sm:mb-4">
           Whether it's cold drink or water, our drinkware collection is designed to enhance your drinking experience. Each piece is a work of art, combining beauty and functionality.
         </p>

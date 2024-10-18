@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import blackMug from "../assets/images/MugBlack.jpg";
+import blackMug from "../assets/images/Products/product15.jpg";
 import yellowmugs from "../assets/images/yellowmugs.jpg";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ interface ContactSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
 const Booking = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
   return (
     <div ref={ref} className="py-12 bg-aboutbg flex items-center">
-      <div className="w-[85%] mx-auto flex max-sm:flex-col max-sm:justify-normal items-center justify-between">
+      <div className="w-[88%] mx-auto flex max-sm:flex-col max-sm:justify-normal items-center justify-between">
         <div className="flex flex-col gap-4 w-[45%] max-sm:w-[90%]">
           <h2 className="text-lg uppercase font-semibold text-orange-700">Our Collections</h2>
           <h1 className="text-[40px] md:text-[55px] leading-[1] font-semibold">
@@ -26,12 +26,12 @@ const Booking = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
         </div>
         <div className="flex gap-8 max-sm:flex-col">
           <img
-            className="h-[340px] md:w-[280px] max-sm:w-[80vw] max-sm:mx-auto max-sm:mt-4 object-cover rounded-lg"
+            className="h-[340px] md:w-[320px] w-[80vw] max-sm:mx-auto max-sm:mt-4 rounded-lg"
             src={blackMug}
             alt="Black Ceramic Mug"
           />
           <img
-            className="h-[340px] w-[280px] max-sm:w-[80vw] max-sm:mx-auto object-cover rounded-lg"
+            className="h-[340px] w-[320px] max-sm:w-[80vw] max-sm:mx-auto object-cover rounded-lg"
             src={yellowmugs}
             alt="Yellow Ceramic Mugs"
           />

@@ -8,7 +8,7 @@ const LoveHome = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col  items-start justify-center h-full p-8 md:p-16 text-white">
         <h1 className="text-[30px] md:text-[44px] w-[60%] font-bold leading-tight absolute bottom-8 md:w-[40%]">
-        “Durable & safe glaze formulations for your coffee & team”
+        “Durable & safe glaze formulations for your coffee & tea”
         </h1>
        
       </div>
