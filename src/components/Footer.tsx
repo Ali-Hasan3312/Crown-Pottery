@@ -2,16 +2,10 @@ import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa6";
-interface FooterProps {
-    onScrollToContact?: () => void;
-    onScrollToBooking?: () => void;
-    onScrollToMenus?: () => void;
-    onScrollToAbout?: () => void;
-    onScrollToLanding?: () => void;
-  }
+
  
 const Footer = (
-    props: FooterProps
+   
 ) => {
     const ScrollTop = () => {
         window.scrollTo({
@@ -39,21 +33,21 @@ const Footer = (
         </div>
         <div className=" h-48 w-[1px] bg-gray-300 max-sm:opacity-0 max-sm:-mt-[380px]"></div>
         <div className="grid grid-cols-2 gap-14 max-sm:ml-2 -ml-6">
-        <div onClick={props.onScrollToLanding} className=" text-white">
-            <h2 className=" md:text-xl text-base font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300">Home</h2>
+        <div onClick={ScrollTop} className=" text-white">
+            <Link to={"/"} className=" md:text-xl text-base font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300">Home</Link>
         </div>
-        <div onClick={props.onScrollToAbout} className=" text-white">
-            <h2 className=" md:text-xl text-base font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300">About</h2>
+        <div onClick={ScrollTop} className=" text-white">
+            <Link to={"/shop"} className=" md:text-xl text-base font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300">Shop</Link>
         </div>
-        <div onClick={props.onScrollToMenus} className=" text-white">
-            <h2 className=" md:text-xl text-base -mt-8 font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300">Menus</h2>
+        <div onClick={ScrollTop} className=" text-white">
+            <Link to={"/orderDetails"} className=" md:text-xl text-base -mt-8 font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300">Orders</Link>
         </div>
         
-        <div onClick={props.onScrollToBooking} className=" text-white">
-            <h2 className=" md:text-xl text-base -mt-8 font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300">Booking</h2>
+        <div onClick={ScrollTop} className=" text-white">
+            <Link to={"/history"} className=" md:text-xl text-base -mt-8 font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300">History</Link>
         </div>
-        <div onClick={props.onScrollToContact} className=" text-white">
-            <h2 className=" md:text-xl text-base -mt-8 font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300">Contact</h2>
+        <div onClick={ScrollTop} className=" text-white">
+            <Link to={"/custom"} className=" md:text-xl text-base -mt-8 font-medium hover:text-red-700 hover:cursor-pointer transition-all duration-300 text-nowrap">Custom Designs</Link>
         </div>
         </div>
         <div className=" h-48 w-[1px] bg-gray-300 max-sm:opacity-0 max-sm:-mt-[350px]"></div>

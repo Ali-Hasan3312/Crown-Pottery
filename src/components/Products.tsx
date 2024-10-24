@@ -1,5 +1,5 @@
 import toast from "react-hot-toast";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import product1 from "../assets/images/Products/product1.jpg";
 import product10 from "../assets/images/Products/product10.jpg";
 import product11 from "../assets/images/Products/product11.jpg";
@@ -31,228 +31,257 @@ import product7 from "../assets/images/Products/product7.jpg";
 import product8 from "../assets/images/Products/product8.jpg";
 import product9 from "../assets/images/Products/product9.jpg";
 import { addToCart } from "../redux/reducer/cartReducer";
-import { RootState } from "../redux/store";
 import SecondNavbar from "./SecondNavbar";
 
 
 
 const Products = () => {
   const dispatch = useDispatch()
-  const {cartItems} = useSelector((state: RootState)=>state.cartReducer)
-  console.log(cartItems);
+
+  
   
   const productList = [
     {
-      id: 1,
+      productId: 1,
       name: "Product 1",
-      price: "Rs 150",
+      price: "150",
       image: product1,
       stock: 10,
+      quantity: 1,
     
     },
     {
-      id: 2,
+      productId: 2,
       name: "Product 2",
-      price: "Rs 150",
+      price: "150",
       image: product2,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 3,
+      productId: 3,
       name: "Product 3",
-      price: "Rs 150",
+      price: "150",
       image: product3,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 4,
+      productId: 4,
       name: "Product 4",
-      price: "Rs 150",
+      price: "150",
       image: product4,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 5,
+      productId: 5,
       name: "Product 5",
-      price: "Rs 200",
+      price: "200",
       image: product5,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 6,
+      productId: 6,
       name: "Product 6",
-      price: "Rs 200",
+      price: "200",
       image: product6,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 7,
+      productId: 7,
       name: "Product 7",
-      price: "Rs 200",
+      price: "200",
       image: product7,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 8,
+      productId: 8,
       name: "Product 8",
-      price: "Rs 200",
+      price: "200",
       image: product8,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 9,
+      productId: 9,
       name: "Product 9",
-      price: "Rs 150",
+      price: "150",
       image: product9,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 10,
+      productId: 10,
       name: "Product 10",
-      price: "Rs 150",
+      price: "150",
       image: product10,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 11,
+      productId: 11,
       name: "Product 11",
-      price: "Rs 200",
+      price: "200",
       image: product11,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 12,
+      productId: 12,
       name: "Product 12",
-      price: "Rs 200",
+      price: "200",
       image: product12,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 13,
+      productId: 13,
       name: "Product 13",
-      price: "Rs 200",
+      price: "200",
       image: product13,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 14,
+      productId: 14,
       name: "Product 14",
-      price: "Rs 200",
+      price: "200",
       image: product14,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 15,
+      productId: 15,
       name: "Product 15",
-      price: "Rs 200",
+      price: "200",
       image: product15,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 16,
+      productId: 16,
       name: "Product 16",
-      price: "Rs 150",
+      price: "150",
       image: product16,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 17,
+      productId: 17,
       name: "Product 17",
-      price: "Rs 150",
+      price: "150",
       image: product17,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 18,
+      productId: 18,
       name: "Product 18",
-      price: "Rs 150",
+      price: "150",
       image: product18,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 19,
+      productId: 19,
       name: "Product 19",
-      price: "Rs 150",
+      price: "150",
       image: product19,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
    
     {
-      id: 20,
+      productId: 20,
       name: "Product 20",
-      price: "Rs 150",
+      price: "150",
       image: product20,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 21,
+      productId: 21,
       name: "Product 21",
-      price: "Rs 150",
+      price: "150",
       image: product21,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 22,
+      productId: 22,
       name: "Product 22",
-      price: "Rs 150",
+      price: "150",
       image: product22,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 23,
+      productId: 23,
       name: "Product 23",
-      price: "Rs 150",
+      price: "150",
       image: product23,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 24,
+      productId: 24,
       name: "Product 24",
-      price: "Rs 200",
+      price: "200",
       image: product24,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 25,
+      productId: 25,
       name: "Product 25",
-      price: "Rs 200",
+      price: "200",
       image: product25,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 26,
+      productId: 26,
       name: "Product 26",
-      price: "Rs 150",
+      price: "150",
       image: product26,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 27,
+      productId: 27,
       name: "Product 27",
-      price: "Rs 150",
+      price: "150",
       image: product27,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 28,
+      productId: 28,
       name: "Product 28",
-      price: "Rs 150",
+      price: "150",
       image: product28,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 29,
+      productId: 29,
       name: "Product 29",
-      price: "Rs 200",
+      price: "200",
       image: product29,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     {
-      id: 30,
+      productId: 30,
       name: "Product 30",
-      price: "Rs 150",
+      price: "150",
       image: product30,
-      stock: 10, // replace with actual image URL
+      stock: 10,
+      quantity: 1, // replace with actual image URL
     },
     
     
@@ -260,10 +289,9 @@ const Products = () => {
   const addToCartHandler = (cartItem:any)=>{
     if(cartItem.stock < 1) return toast.error("Out Of Stock");
     toast.success("Added to cart");
+    dispatch(addToCart({ ...cartItem, quantity: cartItem.quantity }));
     dispatch(addToCart(cartItem));
   }
-
-
   return (
    <div>
     <SecondNavbar />
@@ -271,7 +299,7 @@ const Products = () => {
       <h1 className="text-3xl font-bold text-center mb-8">Our Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {productList.map((product) => (
-          <div key={product.id} className="bg-white shadow-lg rounded-lg p-6">
+          <div key={product.productId} className="bg-white shadow-lg rounded-lg p-6">
             <img src={product.image} alt={product.name} className=" aspect-auto mb-4 rounded-lg" />
             <h2 className="text-2xl font-bold mb-2 text-center">{product.name}</h2>
             <p className="text-gray-700 mb-2 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>

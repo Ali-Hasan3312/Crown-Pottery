@@ -1,4 +1,3 @@
-import Footer from "../components/Footer"
 import Products from "../components/Products"
 
 const Shop = () => {
@@ -6,7 +5,7 @@ const Shop = () => {
     <div>
       
     <Products />
-      <Footer />
+    
       </div>
   )
 }

@@ -10,7 +10,9 @@ const initialState: CartReducerInitialState = {
   shippingCharges: 0,
   discount: 0,
   total: 0,
+  orderItems: [],
   shippingInfo: {
+    name: "",
     address: "",
     city: "",
     state: "",
@@ -25,7 +27,6 @@ export const cartReducer = createSlice({
   reducers: {
     addToCart: (state, action: PayloadAction<CartItem>) => {
       state.loading = true;
-
       const index = state.cartItems.findIndex(
         (i) => i.productId === action.payload.productId
       );
@@ -34,7 +35,6 @@ export const cartReducer = createSlice({
       else state.cartItems.push(action.payload);
       state.loading = false;
     },
-
     removeCartItem: (state, action: PayloadAction<string>) => {
       state.loading = true;
       state.cartItems = state.cartItems.filter(
@@ -44,18 +44,17 @@ export const cartReducer = createSlice({
     },
 
     calculatePrice: (state) => {
-      const subtotal = state.cartItems.reduce(
-        (total, item) => total + item.price * item.quantity,
-        0
-      );
-
+      const subtotal = state.cartItems.reduce((total, item) => {
+        const itemPrice = item.price || 0;
+        const itemQuantity = item.quantity || 0;
+        console.log(itemPrice);
+        
+        return total + itemPrice * itemQuantity;
+      }, 0);
+      console.log("Cart Items",state.cartItems);
       state.subtotal = subtotal;
-      state.shippingCharges = 200;
-      state.tax = Math.round(state.subtotal * 0.18);
-      state.total =
-        state.subtotal + state.tax + state.shippingCharges - state.discount;
+      state.total = subtotal;
     },
-
     discountApplied: (state, action: PayloadAction<number>) => {
       state.discount = action.payload;
     },

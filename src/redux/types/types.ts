@@ -9,6 +9,7 @@ export type Product = {
   };
   
   export type ShippingInfo = {
+    name:string;
     address: string;
     city: string;
     state: string;
@@ -18,7 +19,7 @@ export type Product = {
   
   export type CartItem = {
     productId: string;
-    photo: string;
+    image: string;
     name: string;
     price: number;
     quantity: number;
@@ -35,9 +36,5 @@ export type Product = {
     discount: number;
     total: number;
     status: string;
-    user: {
-      name: string;
-      _id: string;
-    };
-    _id: string;
+   
   };

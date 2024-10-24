@@ -3,7 +3,6 @@ import Image1 from "../assets/images/History/amanda-jones-CcIIao_-Eow-unsplash.j
 import TodayCrown from "../assets/images/History/Crown Today.jpg";
 import growth from "../assets/images/History/labourMan.jpg";
 import milestone from "../assets/images/History/milestone.webp";
-import Footer from "../components/Footer";
 import SecondNavbar from "../components/SecondNavbar";
 const History = () => {
   return (
@@ -103,7 +102,7 @@ const History = () => {
       {/* Footer */}
      
     </div>
-    <Footer />
+    
     </div>
   );
 };
