@@ -4,6 +4,8 @@ import { Toaster } from 'react-hot-toast'
 import Footer from './components/Footer'
 import { Suspense, lazy } from 'react'
 import Loader from './components/Loader'
+import Login from './components/Login'
+import Register from './components/Register'
 
 // Lazy load components and pages
 const NotFound = lazy(() => import('./components/NotFound'));
@@ -23,6 +25,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/shop' element={<Shop />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
             <Route path='/history' element={<History />} />
             <Route path='/products' element={<Products />} />
             <Route path='/shipping' element={<Shipping />} />

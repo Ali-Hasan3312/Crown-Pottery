@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { saveShippingInfo } from "../redux/reducer/cartReducer";
 import { RootState } from "../redux/store";
 import SecondNavbar from "./SecondNavbar";
-
 const Shipping = () => {
   const {
     cartItems,

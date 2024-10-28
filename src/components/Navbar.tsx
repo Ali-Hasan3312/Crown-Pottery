@@ -197,13 +197,13 @@ const Navbar = (props: NavbarProps) => {
             <button onClick={props.onScrollToContact}>Contact</button>
             <Link
               to="/login"
-              className={` py-2 px-4 text-white transition-all duration-300 border border-blue-500 hover:text-black hover:bg-transparent rounded-lg bg-blue-600`}
+              className={` py-2 px-4 text-white transition-all duration-300 border border-blue-500 hover:text-black hover:bg-transparent rounded-lg bg-blue-500`}
             >
               Login
             </Link>
             <Link
               to="/register"
-              className={`py-2 px-4 rounded-lg bg-transparent border border-blue-600 hover:bg-blue-500 hover:text-white transition-all duration-300`}
+              className={`py-2 px-4 rounded-lg bg-transparent border border-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300`}
             >
               Register
             </Link>

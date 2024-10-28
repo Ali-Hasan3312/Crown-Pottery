@@ -42,12 +42,12 @@ const Contact =  forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => {
             <h1 className=" text-xl text-white">Contact Information</h1>
             <p>We will be happy to help with any questions you might have about the Crown Pottery!</p>
             <div className="flex items-start gap-4 mt-8">
-                <FaLocationDot className=" text-white text-xl" />
-                <p>Pilgrims Way, Crown Pottery, Kent, DA1 1QZ</p>
+                <FaLocationDot className=" text-white text-4xl" />
+                <p>Near Bilal Gunj Market,Bazar No. 1, Madina Colony, Sheikhupura Road, Gujranwala</p>
             </div>
             <div className="flex items-start gap-4 mt-8">
                 <IoCall className=" text-white text-xl" />
-                <p>+(92) 3023342784</p>
+                <p>+(92) 3034605269</p>
             </div>
             <div className="flex items-start gap-4 mt-8">
                 <IoMdMail className=" text-white text-xl" />

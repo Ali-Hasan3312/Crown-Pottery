@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import heroImage from "../assets/images/drinkwares.jpg";
 import heroImage2 from "../assets/images/heroImg2.png";
 import heroImage3 from "../assets/images/Products/chinh-le-duc-iCW1ahH3SpE-unsplash.jpg";
+import { useNavigate } from "react-router-dom";
 
 interface ContactSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -19,6 +20,7 @@ const HeroSection = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => 
     autoplay: true,
     autoplaySpeed: 3000,
   };
+  const navigate = useNavigate()
 
   // Updated product offers with Mugs, Cups, and Plates
   const products = [
@@ -63,7 +65,7 @@ const HeroSection = forwardRef<HTMLDivElement, ContactSectionProps>((_, ref) => 
                 <p className="max-w-lg text-lg md:text-xl text-white/80 drop-shadow-sm">
                   {product.description}
                 </p>
-                <button className="mt-4 px-8 py-4 bg-red-500 hover:bg-red-600 text-white rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <button onClick={()=>navigate("/shop")} className="mt-4 px-8 py-4 bg-red-500 hover:bg-red-600 text-white rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-transform duration-300">
                   Shop Now
                 </button>
               </div>
