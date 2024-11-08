@@ -1,15 +1,15 @@
 import { lazy, Suspense, useRef } from 'react';
 import GotoTopButton from '../components/GotoTopButton';
 import OurGallery from '../components/OurGallery';
+import CustomProducts from '../components/CustomProducts';
+import Loader from '../components/Loader';
 const Navbar = lazy(() => import("../components/Navbar"));
 const HeroSection = lazy(() => import("../components/HeroSection"));
 const About = lazy(() => import("../components/About"));
 const InfoGrid = lazy(() => import("../components/InfoGrid"));
 const Booking = lazy(() => import("../components/Booking"));
 const LoveHome = lazy(() => import("../components/LoveHome"));
-const OurProducts = lazy(() => import("../components/OurProducts"));
 const Contact = lazy(() => import("../components/Contact"));
-const Footer = lazy(() => import("../components/Footer"));
 const Home = () => {
   // Creating refs for each component
 
@@ -52,7 +52,7 @@ const Home = () => {
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Navbar
           onScrollToContact={handleScrollToContact}
           onScrollToBooking={handleScrollToBooking}
@@ -63,20 +63,13 @@ const Home = () => {
         />
         <HeroSection ref={heroSectionRef} />
         <GotoTopButton />
+        <CustomProducts />
+        <InfoGrid  />
         <OurGallery ref={galleryRef} />
         <About ref={aboutRef} />
-        <InfoGrid  />
-        <Booking ref={bookingRef} />
         <LoveHome  />
-        <OurProducts ref={menusRef} />
+        <Booking ref={bookingRef} />
         <Contact ref={contactRef} />
-        <Footer
-         onScrollToContact={handleScrollToContact}
-         onScrollToBooking={handleScrollToBooking}
-         onScrollToMenus={handleScrollToMenus}
-         onScrollToAbout={handleScrollToAbout}
-         onScrollToLanding={handleScrollToHome}
-        />
       </Suspense>
     </div>
   );
